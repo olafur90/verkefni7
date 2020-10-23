@@ -1,0 +1,23 @@
+{
+  "name": "verkefni7",
+  "version": "1.0.0",
+  "description": "verk7",
+  "main": "index.html",
+  "dependencies": {
+    "browser-sync": "^2.26.13"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olafur90/verkefni7.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olafur90/verkefni7/issues"
+  },
+  "homepage": "https://github.com/olafur90/verkefni7#readme"
+}
