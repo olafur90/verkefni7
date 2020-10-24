@@ -8,7 +8,32 @@ const LETTERS = `AÁBDÐEÉFGHIÍJKLMNOÓPRSTUÚVXYÝÞÆÖ`;
  * Byrja forrit.
  */
 function start() {
-  alert('Halló!')
+  let action = prompt('Hvort viltu kóða eða afkóða streng? Skrifaðu „kóða“ eða „afkóða“');
+  if(action === 'kóða') {
+
+    var n = prompt('Hversu mikið á að hliðra streng? Gefðu upp heiltölu á bilinu [1, 31]');
+
+    if (Number.isNaN(n) || n < 1 || n > 31) { // Athuga hvort tala sem gefin er upp sé innan leyfilegra marka
+      alert('${input} er ekki heiltala á bilinu [1, 31]. Reyndu aftur.');
+      start();
+    }
+
+    var stringToEncode = prompt('Gefðu upp strenginn sem á að kóða með hliðrun ${n}').toUpperCase();
+
+    /*for (let i = 0; i = stringToEncode.length; i++) {
+      if (!LETTERS.includes(stringToEncode[i]));
+      alert('Ólöglegir stafir');
+      start();
+    }*/
+    alert(stringToEncode);
+
+  } else if(action === 'afkóða') {
+    alert('Ok, þú vilt afkóða!');
+  } else {
+    alert('Veit ekki hvaða aðgerð „${input}“ er. Reyndu aftur');
+    start();
+  }
+
 }
 
 // Hér er gott að commenta út til að vinna í encode/decode föllum fyrst og síðan „viðmóti“ forrits
@@ -22,6 +47,9 @@ start();
  * @returns {string} Upprunalegi strengurinn hliðraður um n til hægri
  */
 function encode(str, n) {
+  for (let i = 0; i < str.length; i++) {
+    str[i] = LETTERS[(str[i] + n) % LETTERS.length];
+  }
   return str;
 }
 
