@@ -16,7 +16,7 @@ function start() {
 
     nIsValid(n);
 
-    let stringToEncode = prompt('Gefðu upp strenginn sem á að kóða með hliðrun ${n}').toUpperCase();
+    let stringToEncode = prompt('Gefðu upp strenginn sem á að kóða með hliðrun n').toUpperCase();
 
     strIsValid(stringToEncode);
 
@@ -27,7 +27,7 @@ function start() {
 
     nIsValid(n);
 
-    let stringToEncode = prompt('Gefðu upp strenginn sem á að kóða með hliðrun ${n}').toUpperCase();
+    let stringToEncode = prompt('Gefðu upp strenginn sem á að kóða með hliðrun n').toUpperCase();
 
     strIsValid(stringToEncode);
 
